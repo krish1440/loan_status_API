@@ -18,13 +18,12 @@ A machine learning-powered API for predicting loan approval status. This API is 
 - Predict loan approval status using a RESTful API.
 - Categorical and numerical input handling.
 - Scalable, production-ready deployment.
-- Simple integration into web or mobile applications.
 
 ## 🔧 How to Use
 
 ### 1. **API Endpoints**
 
-- **GET**: Test the API is running  
+- **GET**: API's Documentation
   URL: [Loan Status API](https://loan-status-api.onrender.com/)  
 
 - **POST**: Predict loan approval status  
