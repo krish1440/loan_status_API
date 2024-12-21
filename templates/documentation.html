@@ -11,7 +11,7 @@
         body {
             font-family: Arial, sans-serif;
         }
-        
+
         header {
             background-color: #003366; /* Navy blue */
             padding: 20px;
@@ -83,7 +83,7 @@
 <body>
     <header>
         <div class="container">
-            <h1>Loan Prediction API</h1>
+            <h2>Loan Prediction API</h2>
             <nav class="header-links">
                 <a href="https://github.com/krish1440/loan_status_API" target="_blank">
                     <i class="fas fa-globe"></i> Project Repo
@@ -100,6 +100,9 @@
                 <a href="mailto:krishchaudhary144@example.com">
                     <i class="fas fa-envelope"></i> Email
                 </a>
+                <a href="https://loan-status-api.onrender.com/predict">
+                    <i class="fas fa-link"></i> API_Link
+                </a>
             </nav>
         </div>
     </header>
@@ -110,6 +113,7 @@
         <p>
             The <strong>Loan Prediction API</strong> allows users to predict whether a loan application will be approved based on the applicant's data. 
             It accepts user input through a POST request to the <code>/predict</code> endpoint and returns the loan approval prediction.
+            <strong>The API is hosted on <a href="https://loan-status-api.onrender.com/predict" target="_blank">render</a>.</strong>
         </p>
 
         <h2>2. API Endpoints</h2>
@@ -193,7 +197,17 @@
             </tbody>
         </table>
 
-        <h3>3. Example Request</h3>
+        <h2>3. How to Use the API</h2>
+        <p>Follow these steps to use the Loan Prediction API:</p>
+        <ol>
+            <li>Prepare the input JSON with all required fields as described above.</li>
+            <li>Send a POST request to the endpoint: <code>https://loan-status-api.onrender.com/predict</code>.</li>
+            <li>Set the <code>Content-Type</code> header to <code>application/json</code>.</li>
+            <li>Pass the input JSON in the body of the request.</li>
+            <li>Receive the prediction response, which will indicate whether the loan is "Approved" or "Not Approved".</li>
+        </ol>
+        
+        <h3>Example Request</h3>
         <h4>Request JSON</h4>
         <pre>
 {
@@ -210,10 +224,9 @@
     "Property_Area": "Urban"
 }
         </pre>
-
         <h4>Example cURL Request</h4>
         <pre>
-curl -X POST http://127.0.0.1:5000/predict \
+curl -X POST https://loan-status-api.onrender.com/predict \
 -H "Content-Type: application/json" \
 -d '{
     "Gender": "Male",
@@ -271,3 +284,4 @@ curl -X POST http://127.0.0.1:5000/predict \
     </div>
 </body>
 </html>
+
